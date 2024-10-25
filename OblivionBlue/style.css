@@ -10,11 +10,13 @@ html, body {font-family: "Lucida Sans Unicode", "Lucida Grande", Tahoma, Arial, 
   --menu-highlight-background-color: #888888;
 
   --settings-background-color: #181818;
+
+  --btn-bg-color: #515151;
 }
 
-button, input.Button {
+button, input[type=button], input[type=submit], .Button {
   border: 1px solid #000;
-  background: #000 url(./images/headers.png) repeat-x 0px 0px;
+  background: var(--btn-bg-color) url(./images/headers.png) repeat-x 0px 0px;
   color:#178FD1;
   cursor: pointer;
   font-weight: bold;
@@ -30,7 +32,11 @@ button:not([disabled]):hover:active, input.Button:not([disabled]):hover:active {
   background: #000 url(./images/headers.png) repeat-x 0px -8px;
 }
 
-#CatList, category-list {
+#offcanvas-sidepanel {
+  color: #626262;
+  background-color: #212121;
+}
+#side-panel, category-list {
   border:none;
   background-color: #212121;
   border-right: 1px solid #1b1b1b;
@@ -126,8 +132,22 @@ ul.CMenu li:hover ul li a:hover { text-shadow:0px -1px 0px #000;}
 #sel {border: 1px dotted #555555;}
 
 div#t {background: #000 url(./images/headers.png) repeat-x 0px -252px; border-bottom: none;}
+#top-menu {
+  background-color: #000;
+  border-bottom: none;
+}
+div#t button.navbar-toggler {
+  background-image: none;
+  border-color: #0F0F0F;
+}
+div#t .nav-link {
+  background: #000 url(./images/headers.png) repeat-x 0px 0px;
+  border-color: #0F0F0F;
+  color: #626262;
+  font-weight: bold;
+}
 div#t a:hover {background: none;}
-div#t div.TB_Separator {border-right:1px solid #262626;background-color: #000;height:35px;margin:0px 0px 0px 5px}
+div#t div.TB_Separator {border-right:1px solid #000000;background-color: #000;height:35px;margin:0px 0px 0px 5px}
 div#t div#add {background: transparent url(./images/toolbar.png) no-repeat 0px 0px}
 div#t div#add:hover {background: transparent url(./images/toolbar.png) no-repeat px -24px}
 div#t div#create {background: transparent url(./images/toolbar.png) no-repeat -24px 0px}
@@ -152,6 +172,7 @@ div#t div#setting {background: transparent url(./images/toolbar.png) no-repeat -
 div#t div#setting:hover {background: transparent url(./images/toolbar.png) no-repeat -264px -24px}
 div#t div#plugins {background: transparent url(./images/toolbar.png) no-repeat -312px 0px}
 div#t div#plugins:hover {background: transparent url(./images/toolbar.png) no-repeat -312px -24px}
+
 div#t div#help {background: transparent url(./images/toolbar.png) no-repeat -288px 0px}
 div#t div#help:hover {background: transparent url(./images/toolbar.png) no-repeat -288px -24px}
 div#t div#go {background: transparent url(./images/toolbar.png) no-repeat -72px 0px}
@@ -164,35 +185,52 @@ input[type="number"],input[type="text"], input[type="password"], select {color: 
 input[type="file"] {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;}
 input[type="number"][disabled],input[type="text"][disabled], input[type="password"][disabled], input[type="file"][disabled], select[disabled] {color: black; border: 1px solid #000;background: #888888 url(./images/headers.png) repeat-x 0px -138px;-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;}
 
+.stable {background-color: #181818; font-family: inherit;}
 .stable-icon {background-image: url(./images/status_icons.png); }
 .Icon_File {background: transparent url(./images/file.gif) no-repeat left center}
 .Icon_Dir {background: transparent url(./images/dir.gif) no-repeat left center}
 .Icon_Share {background: transparent url(./images/dir.gif) no-repeat left center}
 
-
 div.tab {background: #181818;font-family: inherit;}
 div#lcont {background: #181818;font-family: inherit;}
-div#gcont table td.Header {background: transparent url(./images/status_icons.png) no-repeat 0px -286px;font-family: inherit;color:#D4D6C9;padding-left:17px;}
-
-div#gcont table tr {background: #181818 url(./images/headers.png) repeat-x 0px -93px;font-family: inherit;color:#D4D6C9}
-div#gcont table tr td{background: #181818 url(./images/headers.png) repeat-x 0px -38px;}
-div#gcont table {font-family:inherit;}
+div#gcont {font-family:inherit;}
+div#gcont div.row.Header {
+  background-color: transparent;
+  font-family: inherit;
+  color: #D4D6C9;
+}
+div#gcont div.row.Header span {
+  padding-left: 17px;
+  background: transparent url(./images/status_icons.png) no-repeat left -285px;
+}
+div#gcont div.row:not(.Header) span.det-hdr {
+  text-wrap: nowrap;
+  padding-left: 17px;
+  background: transparent url(./images/pnl_close.png) no-repeat left;
+}
+div#gcont div.row {
+  background-color: #181818;
+  font-family: inherit;
+  color: #D4D6C9;
+}
 div.graph_tab {color:#FFF; background-color: #181818}
 .graph_tab_legend { color: #FFF; background-color: #181818; }
 .graph_tab_tooltip { color: #FFF; background-color: #606060; border: 1px solid #606060; }
-div.table_tab {background-color: #181818;font-family: inherit;}
 
 div#modalbg {background-color: #181818;}
 
-div#List {margin-right:6px;border-top: 1px solid #333; border-right: 1px solid #070707; border-left: 1px solid #1b1b1b; border-bottom: 1px solid #000000; background-color: #181818;}
+#list-table {margin-right:6px;border-top: 1px solid #333; border-right: 1px solid #070707; border-left: 1px solid #1b1b1b; border-bottom: 1px solid #000000; background-color: #181818;}
 div#FileList, div#TrackerList, div#PeerList, div#Speed {background-color: #181818}
 
-.dlg-window { background-color: #222222; box-shadow: 2px 2px 5px #888;}
-
-
-.lm li {background: transparent url(./images/bul.gif) no-repeat scroll left center}
-.lm li.first {background: transparent url(./images/bul_f.gif) no-repeat scroll left bottom}
-.lm li.last {background: transparent url(./images/bul_l.gif) no-repeat scroll left top}
+.lm li div > div {
+  border-left-color: #178FD1;
+}
+.lm li div > div:first-of-type {
+  border-bottom-color: #178FD1;
+}
+.lm li div > div:last-of-type {
+  border-top-color: #178FD1;
+}
 .lm li div.toggle {background: transparent url(./images/exp.gif) no-repeat scroll center center}
 .lm li a {color: #888888}
 .lm li a.focus {background-color: #333333}
@@ -207,24 +245,41 @@ div#tdetails {padding:0px;margin:0px;background-color: #181818;color:#888888;-mo
 div#tdcont {background: #181818; border-top: none; border-right: 1px solid #070707; border-left: 1px solid #1b1b1b; border-bottom: 1px solid #000000;}
 
 /*TABBED MENU */
-.tabbar li {margin-right:2px;}
-.tabbar {color:#038BA9;background: #181818 url(./images/headers.png) repeat-x 0px -89px;  text-shadow:0px 1px 0px #000;height:24px;border-top: 1px solid #333; border-right: 1px solid #070707; border-left: 1px solid #1b1b1b; border-bottom: none;}
-.tabbar li a {top:1px;margin: -2px 1px 0px;border-color:#0f0f0f;padding:4px 6px 3px 6px;line-height:24px;background: #000 url(./images/headers.png) repeat-x 0px 0px;color:#626262;cursor: pointer;text-shadow:0px -1px 0px #000;font-family: inherit;-moz-border-radius-topleft:5px; -webkit-border-top-left-radius:5px;-moz-border-radius-topright:5px;-webkit-border-top-right-radius:5px;border-top-right-radius:5px;border-top-left-radius:5px;}
-.tabbar li a:hover {color:#fff;border-color: #0f0f0f;border-width: 1px;}
-.tabbar li.selected a {padding:4px 6px 5px 6px;top:1px;border: 1px solid #333333;border-bottom:none; background: #181818; color: #178FD1;text-shadow:0px -1px 0px #000;}
+.tabbar {
+  color: #038BA9; background: #181818 url(./images/headers.png) repeat-x 0px -89px;
+  text-shadow: 0px 1px 0px #000;
+  border-top: 1px solid #333;
+  border-right: 1px solid #070707;
+  border-left: 1px solid #1b1b1b;
+  border-bottom: none;
+}
+.tabbar li.nav-item a.nav-link {
+  border: 1px solid #0F0F0F;
+  background: #000 url(./images/headers.png) repeat-x 0px 0px;
+  color: #999999;
+  text-shadow:0px -1px 0px #000;
+}
+.tabbar li.nav-item a.nav-link:hover {
+  border-top: 2px solid #222222;
+  color: #FFF;
+}
+.tabbar li.nav-item.selected a.nav-link {
+  border: 1px solid #333333;
+  border-top: 2px solid #222222;
+  background-color: #181818;
+  color: #178FD1;
+}
 
 /* DIALOGS */
 div#dlgProps textarea#prop-trackers {background: #222222; border: 1px solid #333333}
-div.dlg-window {background-color: #222222; color: #fff; border-top: 1px solid #333; border-right: 1px solid #1b1b1b; border-left: 1px solid #1b1b1b; border-bottom: 1px solid #000000;	}
+div.dlg-window {background-color: #222222; box-shadow: 2px 2px 5px #888; color: #fff; border-top: 1px solid #333; border-right: 1px solid #1b1b1b; border-left: 1px solid #1b1b1b; border-bottom: 1px solid #000000;	}
 div.dlg-header { background-color: #222222; border-bottom: 1px solid #333333}
 div#yesnoDlg div.dlg-header {background: #181818 url(./images/dlg-toolbars.gif) no-repeat 0px -120px; border-bottom: 1px solid #333333;text-shadow:0px -1px 0px #000;}
 div#stg-header {background: #181818 url(./images/dlg-toolbars.gif) no-repeat 0px -72px; border-bottom: 1px solid #333333;text-shadow:0px -1px 0px #000;}
 div#stg .lm {background-color: #181818; border: 1px solid #333333}
 div#dlgHelp-header,div#dlgHelp div.dlg-header {background: #181818 url(./images/dlg-toolbars.gif) no-repeat 0px -96px;text-shadow:0px -1px 0px #000;}
 
-div#tadd { margin:5px; }
 div#tadd-header {background: #181818 url(./images/dlg-toolbars.gif) no-repeat 0px 0px; border-bottom: 1px solid #333333;text-shadow:0px -1px 0px #000;}
-
 
 div.tab {background-color: #181818}
 
@@ -260,18 +315,15 @@ background-color: #343434;
 -webkit-border-radius: 6px;
 }
 /* LOG */
-input#clear_log,input#add_url, input#add_button {margin-top:2px;}
-div#lcont {}
 div#lcont div.std {background: #181818 url(./images/headers.png) repeat-x 0px -37px;height:17px;line-height:17px;border-bottom: 1px solid #333333;}
 div#lcont div.std:nth-child(2n+1) {background: #181818 url(./images/headers.png) repeat-x 0px -64px;}
-
 
 #StatusBar { border-top: 1px solid #333333; background: #000 url(./images/headers.png) repeat-x 0px 0px; color: #888888;font-family:inherit; }
 #StatusBar table tr td {padding-right:5px;border:none;background: transparent url(./images/headers.png) no-repeat right -208px;}
 #StatusBar table tr td td {background:none;}
 #StatusBar table tr td:last-child {border-top:red;}
-#st_up { background:url(./images/status.png) no-repeat 6px 2px; }
-#st_down { background:url(./images/status.png) no-repeat 6px -18px; }
+#st_up .icon {background:url(./images/status.png) no-repeat 0px -2px;}
+#st_down .icon {background:url(./images/status.png) no-repeat 0px -22px;}
 .statuscell {padding-right:5px;border:none;}
 #stup_speed{color:#178FD1;}
 #stdown_speed {color: #178FD1;}
@@ -285,7 +337,7 @@ span#us,span#ul {color:#178FD1;}
 span.det {color:#fff;}
 
 .meter-value-start-color { background-color: #E05400 }
-.meter-value-end-color { background-color: #8FBC00 }
+.meter-value-end-color { background-color: #4a7ed5 }
 ::-webkit-scrollbar {
     width: 15px;
     height: 15px;
@@ -300,4 +352,12 @@ span.det {color:#fff;}
     width: 0;
     height: 0;
     display: none;
+}
+
+@media (min-width: 768px) { 
+  /* Custom rules for medium devices */
+  div#t .nav-link {
+    background: none;
+    border: none;
+  }
 }
