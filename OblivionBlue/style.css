@@ -35,6 +35,7 @@ button:not([disabled]):hover:active, input.Button:not([disabled]):hover:active {
 #offcanvas-sidepanel {
   color: #626262;
   background-color: #212121;
+  border: 1px solid #000000 !important;
 }
 #side-panel, category-list {
   border:none;
