@@ -16,7 +16,7 @@ html, body {font-family: "Lucida Sans Unicode", "Lucida Grande", Tahoma, Arial, 
   --menu-item-active-icon: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAICAYAAAA1BOUGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAxUlEQVQImWMUFBRkQAO6MAYzJycnqgS3oBRLyqyj//79zWRC18YcULWDgYOL4Z+MDgMTg3vefybr6P8MDAy6TK5ZlxglVBn+vHzA8O/qPgaWvwxMDMwGXgwsCgaXGGW0Gf68fsjw5+YxBub7pw2Z2X5/fcEgLOfDLKXO8P/rR4bft04wMJ3dYMf05+cpZu5/33/9+fsn8z8zK8PfN48YGM6sC2X+9n4HAwMDAwsDA8NlljvHGH/++fOf6fNrO7aPLw7DHAcAYQxFFwvnY44AAAAASUVORK5CYII=);
   --menu-item-exp-icon: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAKCAYAAAB4zEQNAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAmElEQVQYlWXNsQ2DMBRF0WuM6BByhcQADIFLl9SkZ6nskCYdI0DjDbwBJXJnxXEqJExO+a/0vlBKPYAXIIEvFwXwNsbQtm3kpgA+TdMwTRNa61RVVRYBkFIyDAPzPKeu61IWT3VdM44jfd+nv3j/mfHesyzL0zknyvMYY2TbNqy1IoQAQAlwHAfrurLvu7iuCKUUQAKyAPADcbArU+HIrAcAAAAASUVORK5CYII=);
 
-  --menu-connect-line-color: #aacf27;
+  --menu-connect-line-color: #2782cf;
   --menu-connect-line-style: dotted;
 
   --container-bg-color: #181818;
@@ -53,7 +53,7 @@ category-panel {
 button, input[type=button], input[type=submit], .Button {
   border: 1px solid #000;
   background: var(--btn-bg-color) url(./images/headers.png) repeat-x 0px 0px;
-  color:#AACF27;
+  color:#2782cf;
   font-weight: bold;
   text-shadow:0px -1px 0px #000;
   -moz-border-radius: 5px;
@@ -205,7 +205,7 @@ input[type="file"] {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-
 input[type="number"][disabled],input[type="text"][disabled], input[type="password"][disabled], input[type="file"][disabled], select[disabled] {color: black; border: 1px solid #000;background: #888888 url(./images/headers.png) repeat-x 0px -138px;-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;}
 
 .stable {background-color: #181818; font-family: inherit;}
-.stable-icon {background-image: url(./images/status_icons.png); }
+.stable-icon {background-image: url(./images/status_iconsblue.png); }
 .Icon_File {background: transparent url(./images/file.gif) no-repeat left center}
 .Icon_Dir {background: transparent url(./images/dir.gif) no-repeat left center}
 .Icon_Share {background: transparent url(./images/dir.gif) no-repeat left center}
@@ -333,10 +333,10 @@ div#lcont div.std {background: #181818 url(./images/headers.png) repeat-x 0px -3
 div#lcont div.std:nth-child(2n+1) {background: #181818 url(./images/headers.png) repeat-x 0px -64px;}
 
 #StatusBar { color: #888888; }
-#st_up .icon {background:url(./images/status.png) no-repeat 0px -2px;}
-#st_down .icon {background:url(./images/status.png) no-repeat 0px -22px;}
+#st_up .icon {background:url(./images/statusblue.png) no-repeat 0px -2px;}
+#st_down .icon {background:url(./images/statusblue.png) no-repeat 0px -22px;}
 .statuscell {padding-right:5px;border:none;}
-#stup_speed{color:#AACF27;}
+#stup_speed{color:#2782cf;}
 #stdown_speed {color: #178FD1;}
 #stup_total,#stdown_total{color:#fff;}
 .Icon_Dir {background-image: url(./images/status_icons.png);background-position: 0px -272px;}
@@ -344,7 +344,7 @@ div#lcont div.std:nth-child(2n+1) {background: #181818 url(./images/headers.png)
 
 span#ds,span#dl {color: #178FD1;}
 span#ra {color:#F70000;}
-span#us,span#ul {color:#AACF27;}
+span#us,span#ul {color:#2782cf;}
 span.det {color:#fff;}
 
 .meter-value-start-color { background-color: #E05400 }

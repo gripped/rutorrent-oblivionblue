@@ -12,7 +12,7 @@ plugin.allDone = function()
 		var plg = thePlugins.get(name);
 		if(plg && plg.enabled)
 		{
-			plg.prgStartColor = new RGBackground("#8fbc00");
+			plg.prgStartColor = new RGBackground("#4a7ed5");
 			plg.prgEndColor = new RGBackground("#d76000");
 		}
 	});
@@ -23,5 +23,5 @@ dxSTable.prototype.create = function(ele, styles, aName)
 {
 	plugin.oldTableCreate.call(this, ele, styles, aName);
 	this.prgStartColor = new RGBackground("#d76000");
-	this.prgEndColor = new RGBackground("#8fbc00");
+	this.prgEndColor = new RGBackground("#4a7ed5");
 }
