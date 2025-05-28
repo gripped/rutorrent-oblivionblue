@@ -11,7 +11,7 @@
   --row-highlight-brightness: 1;
 }
 .stable thead {
-  color: #626262;
+  color: #DCDCDC;
   text-shadow:0px 1px 0px #000;
 }
 .stable thead div.resz {border: 1px solid #FF0000; background: transparent url(./images/s.gif) no-repeat scroll left center;}
